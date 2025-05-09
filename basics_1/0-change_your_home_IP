@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bash
+
+cp /etc/hosts /etc/hosts.bak
+
+sed -i '/127.0.0.2[[:space:]]\+localhost/d' /etc/hosts
+sed -i '/8.8.8.8[[:space:]]\+facebook.com/d' /etc/hosts
+
+echo "127.0.0.2 localhost" >> /etc/hosts
+echo "8.8.8.8 facebook.com" >> /etc/hosts
